@@ -28,7 +28,7 @@ if (%ERRORLEVEL%)==(3) goto END
 :RUNSQL
 echo.
 echo Running %SQLFILE%...
-sqlcmd -E -S .\sqlexpress -i %SQLFILE% -b -m 1
+sqlcmd -E -S "(localdb)\MSSQLLocalDB" -i %SQLFILE% -b -m 1
 
 :END
 echo.
